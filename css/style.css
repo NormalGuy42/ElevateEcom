@@ -18,8 +18,26 @@
     list-style-type: none;
     box-sizing: border-box;
     /* box-shadow: 0 0 0 2px red */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-
+.noSelect {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+*:focus {
+    outline: none !important;
+}
 a{
     text-decoration: none;
 }
@@ -81,7 +99,12 @@ main{
 
 h1.title{
     font-family: Unbounded, sans-serif;
+    font-size: 2.4em;
+    margin-bottom: 24px;
+}
+.big-title{
     font-size: 2.8em;
+    font-family: Unbounded, sans-serif;
     margin-bottom: 24px;
 }
 img{
@@ -185,7 +208,9 @@ svg.arrow-down{
     flex-direction: column;
     justify-content: center;
 }
-
+.personal p{
+    white-space: pre-line;
+}
 .personal button{
     width: fit-content;
     margin-top: 48px;
@@ -204,9 +229,9 @@ svg.arrow-down{
     width: 50%;
     mask-repeat: repeat;
     mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' overflow='visible' height='100%' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='square' stroke-miterlimit='10'%3E%3Cpath d='M0,6c6,0,6,13,12,13S18,6,24,6'/%3E%3C/svg%3E");
-    mask-size: 20px;
+    mask-size: 20px 100%;
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' overflow='visible' height='100%' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='square' stroke-miterlimit='10'%3E%3Cpath d='M0,6c6,0,6,13,12,13S18,6,24,6'/%3E%3C/svg%3E");
-    -webkit-mask-size: 20px;
+    -webkit-mask-size: 20px 100%;
     -webkit-mask-repeat: repeat;
     background-color: var(--mainblue) ;
 }
@@ -349,6 +374,9 @@ footer .copyright{
         top: 80px;
     }
     h1.title{
+        font-size: 2em;
+    }
+    .big-title{
         font-size: 2.4em;
     }
     .presentation p{
